@@ -2,120 +2,136 @@
 using static System.Math;
 //using System.Linq; //hace falta?
 
-// namespace Ejemplo_menu
-// {
-//     class Program
-//     {
-//         static void Main(string[] args)
-//         {
-             
-//             bool salir = false;
- 
-//             while (!salir) {
- 
-//                 try
-//                 {
-                     
-//                     Console.WriteLine("1. Obtener el numero mayor y menor de una lista");
-//                     Console.WriteLine("2. Saber si un numero es par o impar");
-//                     Console.WriteLine("3. Averiguar si un año es bisiesto");
-//                     Console.WriteLine("4. Saber si una cadena es un palindromo");
-//                     Console.WriteLine("5. Ordenar una lista de nombres");
-//                     Console.WriteLine("6. Calcular el factorial de un numero");
-//                     Console.WriteLine("7.Saber si un numero es primo");
-//                     Console.WriteLine("8.Calcular el Área y el volumen de un cubo");
-//                     Console.WriteLine("9. Sumar los numeros pares de una lista");
-//                     Console.WriteLine("10.Saber si un numero es positivo negativo o cero ");
-//                     Console.WriteLine("11.Calcular la media de una lista ");
-//                     Console.WriteLine("12. Juego: Adivina el numero entre 0 y 100 ");
-//                     Console.WriteLine("13. Saber si dos cadenas son anagramas");
-//                     Console.WriteLine("14. Eliminar numeros duplicados en una lista ");
-//                     Console.WriteLine("15. Saber si un numero es capicua ");
-//                     Console.WriteLine("0. Salir");
-//                     Console.WriteLine("Elige una de las opciones");
-//                     int opcion = Convert.ToInt32(Console.ReadLine());
- 
-//                     switch (opcion)
-//                     {
-//                         case 1:
-//                            MenorMayor();
-//                             break;
- 
-//                         case 2:
-                         
-//                             break;
- 
-//                         case 3:
-                            
-//                             break;
-//                         case 4:
-                            
-//                             break;
-//                         case 5:
-                            
-//                             break;
-//                         case 6:
-                            
-//                             break;
-//                         case 7:
-                            
-//                             break;
-//                         case 8:
-                            
-//                             break;
-//                         case 9:
-                            
-//                             break;
-//                         case 10:
-                            
-//                             break;
-//                         case 11:
-                            
-//                             break;
-//                         case 12:
-                            
-//                             break;
-//                         case 13:
-                            
-//                             break;
-//                         case 14:
-                            
-//                             break;
-//                         case 15:
-                            
-//                             break;
-//                         case 0:
-//                             Console.WriteLine("Has elegido salir de la aplicación");
-//                             salir = true;
-//                             break;
-//                         default:
-//                             Console.WriteLine("Elige una opcion entre 1 y 4");
-//                             break;
-//                     }
- 
-//                 }
-//                 catch (FormatException e)
-//                 {
-//                     Console.WriteLine(e.Message);
-//                 }
-//             }
- 
-//             Console.ReadLine();
- 
-//         }
-//     }
-// }
+
+
+bool salir = false;
+while (!salir) {
+try
+{
+        
+    Console.WriteLine("1. Obtener el numero mayor y menor de una lista");
+    Console.WriteLine("2. Saber si un numero es par o impar");
+    Console.WriteLine("3. Averiguar si un año es bisiesto");
+    Console.WriteLine("4. Saber si una cadena es un palindromo");
+    Console.WriteLine("5. Ordenar una lista de nombres");
+    Console.WriteLine("6. Calcular el factorial de un numero");
+    Console.WriteLine("7. Saber si un numero es primo");
+    Console.WriteLine("8. Calcular el Área y el volumen de un cubo");
+    Console.WriteLine("9. Sumar los numeros pares de una lista");
+    Console.WriteLine("10.Saber si un numero es positivo negativo o cero ");
+    Console.WriteLine("11. Calcular la media de una lista ");
+    Console.WriteLine("12. Juego: Adivina el numero entre 0 y 100 ");
+    Console.WriteLine("13. Saber si dos cadenas son anagramas");
+    Console.WriteLine("14. Eliminar numeros duplicados en una lista ");
+    Console.WriteLine("15. Saber si un numero es capicua ");
+    Console.WriteLine("0. Salir");
+    Console.WriteLine("Elige una de las opciones");
+    int opcion = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    switch (opcion)
+    {
+        case 1:
+            MenorMayor();
+            break;
+
+        case 2:
+            ParImpar();
+            break;
+           
+        case 3:
+            AnyoBisiesto();
+            break;
+        case 4:
+            palindromo();
+            break;
+        case 5:
+            ordenarLista();
+            break;
+        case 6:
+            factorial();
+            break;
+        case 7:
+            NumeroPrimo();
+            break;
+        case 8:
+            AreaVolumenCubo();
+            break;
+        case 9:
+            SumaNumerosPares();
+            break;
+        case 10:
+            NumeroPositivoNegativoCero();
+            break;
+        case 11:
+            MediaLista();
+            break;
+        case 12:
+            AdivinarNumero();
+            break;
+        case 13:
+            Anagrama();
+            break;
+        case 14:
+            EliminarDuplicados();
+            break;
+        case 15:
+            Capicua();
+            break;
+        case 0:
+            Console.WriteLine("Has elegido salir de la aplicación");
+            salir = true;
+            break;
+        default:
+            Console.WriteLine("Elige una opcion entre 1 y 15");
+            break;
+    }
+
+}
+catch (FormatException e)
+{
+    Console.WriteLine(e.Message);
+}
+}
+
+Console.ReadLine();
+
 
 
 
 void MenorMayor()
 {
+        Console.WriteLine("Introduce los números separados por comas:");
+        string? numerosStr = Console.ReadLine();
+        if (numerosStr==null){
+            WriteLine("Numeros invalidos");
+            return;
+        }
+        string?[] numeros = numerosStr.Split(',');
+        int[] numerosInt = new int[numeros.Length];
+         for (int i = 0; i < numeros.Length; i++)
+        {
+            if (numeros[i]!=null){
+            Int32.TryParse(numeros[i].ToString(),out numerosInt[i]);
+           }
+        }
+    //int[] numeros = { 5, 3, 8, 1, 7, 2 };
+    int mayor = numerosInt[0];
+    int menor = numerosInt[0];
 
-    int[] numeros = { 5, 3, 8, 1, 7, 2 };
-    int mayor = numeros[0];
-    int menor = numeros[0];
-
-    foreach (int numero in numeros)
+    foreach (int numero in numerosInt)
     {
         if (numero > mayor)
         {
@@ -197,12 +213,14 @@ void palindromo()
     {
         WriteLine("La cadena no es un palíndromo");
     }
-
+ ReadLine();
 }
 
 void ordenarLista()
-{
-    string[] nombres = { "Juan", "Maria", "Ana", "Pedro" };
+{ 
+    Console.WriteLine("Introduce los números separados por comas:");
+    string? nombresJuntos = Console.ReadLine();
+    string?[] nombres = nombresJuntos.Split(',');
 
     Array.Sort(nombres);
 
@@ -212,6 +230,7 @@ void ordenarLista()
     {
         WriteLine(nombre);
     }
+     ReadLine();
 }
 
 void factorial()
@@ -232,7 +251,7 @@ void factorial()
     else
         WriteLine("Número inválido");
 
-    ReadKey();
+    ReadLine();
 }
 
 void NumeroPrimo()
@@ -260,6 +279,8 @@ void NumeroPrimo()
         WriteLine("{0} es un número primo", num);
     else
         WriteLine("{0} no es un número primo", num);
+    
+ ReadLine();
 }
 
 void AreaVolumenCubo()
@@ -284,10 +305,18 @@ void AreaVolumenCubo()
 
 void SumaNumerosPares()
 {
-    List<int> numeros = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    Console.WriteLine("Introduce los números separados por comas:");
+        string? numerosStr = Console.ReadLine();
+        string?[] numeros = numerosStr.Split(',');
+        int[] numerosInt = new int[numeros.Length];
+         for (int i = 0; i < numeros.Length; i++)
+        {
+            numerosInt[i] = int.Parse(numeros[i]);
+        }
+   // List<int> numeros = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     int suma = 0;
 
-    foreach (int num in numeros)
+    foreach (int num in numerosInt)
     {
         if (num % 2 == 0)
             suma += num;
@@ -322,9 +351,18 @@ void NumeroPositivoNegativoCero()
 
 void MediaLista()
 {
-    int[] numeros = { 10, 20, 30, 40, 50 };
-    double media = numeros.Average();
+    Console.WriteLine("Introduce los números separados por comas:");
+        string? numerosStr = Console.ReadLine();
+        string?[] numeros = numerosStr.Split(',');
+        int[] numerosInt = new int[numeros.Length];
+         for (int i = 0; i < numeros.Length; i++)
+        {
+            numerosInt[i] = int.Parse(numeros[i]);
+        }
+    //int[] numeros = { 10, 20, 30, 40, 50 };
+    double media = numerosInt.Average();
     WriteLine("La media es: " + media);
+    ReadLine();
 }
 
 void AdivinarNumero()
@@ -354,14 +392,16 @@ void AdivinarNumero()
             WriteLine("El número introducido es mayor que el número aleatorio.");
         }
     }
-
+    if (numeroAleatorio == numeroUsuario)
     WriteLine("¡Has acertado el número en " + intentos + " intentos!");
+    ReadLine();
 }
 
 void Anagrama()
-{
-    string palabra1 = "roma";
-    string palabra2 = "amor";
+{   WriteLine("Introduce la primer palabra");
+    string palabra1 = Console.ReadLine();
+    WriteLine("Introduce la segunda palabra");
+    string palabra2 = Console.ReadLine();
 
     char[] letras1 = palabra1.ToLower().ToCharArray();
     char[] letras2 = palabra2.ToLower().ToCharArray();
@@ -379,15 +419,24 @@ void Anagrama()
     {
         WriteLine(palabra1 + " y " + palabra2 + " no son anagramas.");
     }
+     ReadLine();
 }
 
 void EliminarDuplicados()
 {
-    List<int> numeros = new List<int>() { 10, 20, 30, 20, 50 };
+    Console.WriteLine("Introduce los números separados por comas:");
+        string? numerosStr = Console.ReadLine();
+        string?[] numeros = numerosStr.Split(',');
+        int[] numerosInt = new int[numeros.Length];
+         for (int i = 0; i < numeros.Length; i++)
+        {
+            numerosInt[i] = int.Parse(numeros[i]);
+        }
+    //List<int> numeros = new List<int>() { 10, 20, 30, 20, 50 };
 
     List<int> numerosSinDuplicados = new List<int>();
 
-    foreach (int numero in numeros)
+    foreach (int numero in numerosInt)
     {
         if (!numerosSinDuplicados.Contains(numero))
         {
@@ -396,7 +445,8 @@ void EliminarDuplicados()
     }
 
     WriteLine("Números originales: " + string.Join(", ", numeros));
-    WriteLine("Números originales: " + string.Join(", ", numeros));
+    WriteLine("Números depurados: " + string.Join(", ", numerosSinDuplicados));
+    ReadLine();
 
 }
 
@@ -427,35 +477,5 @@ void Capicua()
     {
         Console.WriteLine("El número no es capicúa.");
     }
+     ReadLine();
 }
-
-MenorMayor();
-ParImpar();
-AnyoBisiesto();
-palindromo();
-ordenarLista();
-factorial();
-NumeroPrimo();
-AreaVolumenCubo();
-SumaNumerosPares();
-NumeroPositivoNegativoCero();
-MediaLista();
-AdivinarNumero();
-Anagrama();
-EliminarDuplicados();
-Capicua();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
