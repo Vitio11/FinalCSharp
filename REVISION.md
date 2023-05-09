@@ -1,10 +1,4 @@
-# Martes 9 de Mayo de 2023
-
-## Azure
-
-Trabajo previo final CSharp
-
-Revisión por parejas de los ejercicios de ayer
+# Revisión
 
 1) Descargar (clonar) el repositorio
 
