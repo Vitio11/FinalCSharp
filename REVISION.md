@@ -12,8 +12,8 @@ Revisión por parejas de los ejercicios de ayer
 
 3. Comprobar en la construcción: `dotnet build`
 
-   - [ ] 0 Errores 
-   - [ ] 0 Advertencias (warnings) 
+   - [X] 0 Errores 
+   - [X] 0 Advertencias (warnings) 
 
 4) Probar cada una de las 15 opciones:
 
@@ -57,33 +57,33 @@ Revisión por parejas de los ejercicios de ayer
    12. Adivinar Numero
    13. Anagrama
 
-   - [ ] "Amor" y "Roma"
+   - [X] "Amor" y "Roma"
 
-   - [ ] "Ratón" y "troná"
+   - [X] "Ratón" y "troná"
 
-   - [ ] "Arte" y "trea"
+   - [X] "Arte" y "trea"
 
-   - [ ] "Roma" y "amor"
+   - [X] "Roma" y "amor"
 
-   - [ ] "Mora" y "ramo"
+   - [X] "Mora" y "ramo"
 
-   - [ ] "Salud" y "ludas"
+   - [X] "Salud" y "ludas"
 
-   - [ ] "Té" y "et"
+   - [X] "Té" y "et"
 
-   - [ ] "Mar" y "ram"
+   - [X] "Mar" y "ram"
 
-   - [ ] "Después" y "sedupés"
+   - [X] "Después" y "sedupés"
 
-   - [ ] "El ojo" y "lojeo"
+   - [X] "El ojo" y "lojeo"
 
-   - [ ] "Vida" y "diva"
+   - [X] "Vida" y "diva"
 
-   - [ ] "Museo" y "sumeo"
+   - [X] "Museo" y "sumeo"
 
-   - [ ] "Cine" y "nice"
+   - [X] "Cine" y "nice"
 
-   - [ ] "Casa" y "saca".
+   - [X] "Casa" y "saca".
    14. Eliminar Duplicados
    15. Capicua
    - [X] 1001
