@@ -29,18 +29,6 @@ try
     int opcion = Convert.ToInt32(Console.ReadLine());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     switch (opcion)
     {
         case 1:

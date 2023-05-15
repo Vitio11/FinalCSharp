@@ -3,10 +3,18 @@ using static System.Console;
 class Anagra{
     public void Anagrama()
 {   WriteLine("Introduce la primer palabra");
-    string palabra1 = Console.ReadLine();
-    WriteLine("Introduce la segunda palabra");
-    string palabra2 = Console.ReadLine();
 
+    string? palabra1;
+    string? palabra2;
+    palabra1 = Console.ReadLine();
+    WriteLine("Introduce la segunda palabra");
+    palabra2 = Console.ReadLine();
+     if (palabra1  == null || palabra2==null)
+        {
+            WriteLine("Numeros invalidos");
+            return;
+        }
+  
     char[] letras1 = palabra1.ToLower().ToCharArray();
     char[] letras2 = palabra2.ToLower().ToCharArray();
 

@@ -14,9 +14,7 @@ class NumerosMayormenor
         int[] numerosInt = new int[numeros.Length];
         for (int i = 0; i < numeros.Length; i++)
         {
-            if (numeros[i] == null) { }
-            else
-                Int32.TryParse(numeros[i].ToString(), out numerosInt[i]);
+          int.TryParse(numeros[i], out numerosInt[i]);
 
         }
         //int[] numeros = { 5, 3, 8, 1, 7, 2 };
